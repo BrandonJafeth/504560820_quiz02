@@ -7,7 +7,7 @@ const Content = () => {
   const currentProducts = step > 3 || step < 1 ? products : products.filter(product => product.step === step);
 
   return (
-    <div>
+    <div className="card">
       {currentProducts.map(product => (
         <div key={product.id}>
           <h2>{product.name}</h2>

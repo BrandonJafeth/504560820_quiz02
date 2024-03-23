@@ -1,9 +1,19 @@
+import { useContext } from "react";
+import MyContext from "../context/MyContext";
 
 const Content = () => {
-    
- return (
-    <div className='card'>
-       
+  const {step, products} = useContext(MyContext)
+
+  const currentProducts = step > 3 || step < 1 ? products : products.filter(product => product.step === step);
+
+  return (
+    <div>
+      {currentProducts.map(product => (
+        <div key={product.id}>
+          <h2>{product.name}</h2>
+          <p>{product.price}</p>
+        </div>
+      ))}
     </div>
   )
 }

@@ -4,11 +4,11 @@ import MyContext from "../context/MyContext";
 const Content = () => {
   const {step, products} = useContext(MyContext)
 
-  const currentProducts = step > 4 || step < 1 ? products : products.filter(product => product.step === step);
+  const logicProducts = step > 4 || step < 1 ? products : products.filter(product => product.step === step);
 
   return (
     <div className="card">
-      {currentProducts.map(product => (
+      {logicProducts.map(product => (
         <div key={product.id}>
           <h2>{product.name}</h2>
           <p>{product.price}</p>
@@ -19,3 +19,5 @@ const Content = () => {
 }
 
 export default Content
+
+// Probandolo si hay mas de 3 steps con datos ademas asignandole una variable más clara

@@ -13,7 +13,8 @@ export interface IThemeProviderProps {
       { id:4, step:2, name: 'Keyboard', price: 80 },
       { id:5, step:2, name: 'Headset', price: 90 },
       { id:6, step:3, name: 'Tablet', price: 100 },
-      { id:7, step:3, name: 'Hub', price: 110 }
+      { id:7, step:3, name: 'Hub', price: 110 },
+      { id:8, step:4, name: 'Hub', price: 110 }
     ]);
 
     const changeStep = (newStep) => {

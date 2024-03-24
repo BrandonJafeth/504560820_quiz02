@@ -4,7 +4,7 @@ import MyContext from "../context/MyContext";
 const Content = () => {
   const {step, products} = useContext(MyContext)
 
-  const currentProducts = step > 3 || step < 1 ? products : products.filter(product => product.step === step);
+  const currentProducts = step > 4 || step < 1 ? products : products.filter(product => product.step === step);
 
   return (
     <div className="card">
